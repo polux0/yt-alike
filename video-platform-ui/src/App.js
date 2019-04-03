@@ -5,6 +5,7 @@ class App extends Component {
     return (
       <div className="App">
         {process.env.WHATEVER}
+        enviornment variables doesn't work
       </div>
     );
   }
