@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import SearchBar from './components/SearchBar';
 
-class App extends Component {
+export default class App extends Component {
+
+  state = {};
   render() {
     return (
-      <div className="App">
-        {process.env.WHATEVER}
-        enviornment variables doesn't work
+      <div className="ui container">
+      	<SearchBar />
       </div>
     );
   }
 }
-
-export default App;
