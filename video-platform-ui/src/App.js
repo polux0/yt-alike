@@ -5,7 +5,10 @@ import youtube from './apis/youtube';
 
 export default class App extends Component {
 
-  state = {videos: []};
+  state = {
+            videos: [],
+            selectedVideo
+          };
 
   onTermSubmit = async term => {
   	console.log('App.js, search term' + term);
@@ -22,8 +25,7 @@ export default class App extends Component {
     return (
       <div className="ui container">
       	<SearchBar onTermSubmit={this.onTermSubmit} />
-      	I have {this.state.videos.length} videos.
-        <VideoList videos={this.state.videos}
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
