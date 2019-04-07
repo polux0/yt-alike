@@ -7,7 +7,7 @@ export default class App extends Component {
 
   state = {
             videos: [],
-            selectedVideo
+            selectedVideo: ''
           };
 
   onTermSubmit = async term => {
