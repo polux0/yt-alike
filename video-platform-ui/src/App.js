@@ -7,7 +7,7 @@ export default class App extends Component {
 
   state = {
             videos: [],
-            selectedVideo: ''
+            selectedVideo: null
           };
 
   onTermSubmit = async term => {
@@ -21,11 +21,15 @@ export default class App extends Component {
   	this.setState({videos: response.data.items});
 
   }
+  onVideoSelect = (video) => {
+    console.log('From the App!');
+    console.log(video);
+  }
   render() {
     return (
       <div className="ui container">
       	<SearchBar onTermSubmit={this.onTermSubmit} />
-        <VideoList videos={this.state.videos} />
+        <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} />
       </div>
     );
   }
